@@ -1,7 +1,7 @@
 <h3> Room title : OhSINT </h3>
 <p> This challenge only gives you an image to download, and then you have to use your Googling skills to answer all the questions in the room </p>
 <p> Here is the image given, the classic Windows XP wallpaper ! </p>
-![](images/ohsint.jpg)
+![](../images/ohsint.jpg)
 <h3> The informations we need to find are : </h3>
 
 <p> What is this users avatar of?
