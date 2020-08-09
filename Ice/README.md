@@ -39,5 +39,9 @@ After getting the CVE code from Rapid7, i searched it on cvedetails.com, it turn
 <img src="https://github.com/She9Bang/TryHackMe/blob/master/images/priv7.png">
 
 <h3>IV. Post exploitation : </h3>
+<p><b>hashdump : </b> dump all of the password hashes stored on the system</p>
+<p><b>timestomp: </b> modify timestamps of files on the system (complicate the forensics) </p>
+<p><b>golden_ticket_create : </b> Mimikatz allows us to create a `golden ticket`,which abuses a component to Kerberos (the authentication system in Windows domains).Golden ticket attacks allow us to maintain persistence and authenticate as any user on the domain.</p>
+<p><b> As we have the password for the user 'Dark' we can now authenticate to the machine and access it via remote desktop (MSRDP). As this is a workstation, we'd likely kick whatever user is signed onto it off if we connect to it, however, it's always interesting to remote into machines and view them as their users do. If this hasn't already been enabled, we can enable it via the following Metasploit module: `run post/windows/manage/enable_rdp`</p>
 
 
