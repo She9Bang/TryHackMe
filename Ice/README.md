@@ -10,5 +10,18 @@ After getting the CVE code from Rapid7, i searched it on cvedetails.com, it turn
 <img src="https://github.com/She9Bang/TryHackMe/blob/master/images/rapid7.png">
 <img src="https://github.com/She9Bang/TryHackMe/blob/master/images/cve.png">
 
-<p>Now that we know the exploit that might work, let's fireup Metasploit, search for the exploit, set the options, and launch it ! we got a Meterpreter Shell !! </p> 
+<p>Now that we know the exploit that might work, let's fireup Metasploit, search for the exploit, set the options, and launch it ! we got a Meterpreter Shell as the user "Dark"  !! </p> 
 <img src="https://github.com/She9Bang/TryHackMe/blob/master/images/shell.png">
+
+<h3>II.Priv Escalation : </h3>
+<p> First step is to do some basic Recon to try out some Priv escalation exploits ! From the previous screenshot, we can see that the windows build is 7601, the process is running on an x64 architecture </p>
+<p> To search for exploits that might work, we run the command <b>'run post/multi/recon/local_exploit_suggester'</b></p>
+<img src="https://github.com/She9Bang/TryHackMe/blob/master/images/priv0.png">
+<p>Let's try the first exploit, set the eoptions and run it, It works ! </p>
+<img src="https://github.com/She9Bang/TryHackMe/blob/master/images/priv2.png">
+<p> We're not Authority system yet ! We're still the user Dark, but we have raised our privs to SYSTEM level privileges, we even have the "SeTakeOwnershipPrivilege" which allows us to take ownership of files </p>
+
+<p>Getprivs output before priv escalation</p>
+<img src="https://github.com/She9Bang/TryHackMe/blob/master/images/priv1.png">
+<p>Getprivs output after priv escalation</p>
+<img src="https://github.com/She9Bang/TryHackMe/blob/master/images/priv3.png">
