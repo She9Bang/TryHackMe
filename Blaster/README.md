@@ -25,3 +25,11 @@ there was a "CVE-2019–1388" on the history ! maybe someone deleted it ? </p>
 <img src="https://github.com/She9Bang/TryHackMe/blob/master/images/blaster8.png">
 
 <h3> III.Exploiting with Metasploit :</h3>
+<p>We will use Metasploit in order to gain a persistance remote shell access ! </p>
+<p> In metasploit, use <b>'exploit/multi/script/web_delivery'</b> which is a <b>web delivery exploit</b>, which fires up a web server that serves a payload, after choosing a payload, the provided command  will allow for the payload to download and execute. The main purpose of this module is to quickly establish a session on a target machine when the attacker has to manually type in the command: e.g. Command Injection, RDP Session, Local Access or maybe Remote Command Execution. </p>
+<p> For the target we choose <b>powershell</b>, the payload <b>'set payload windows/meterpreter/reverse_http'</b>
+<p>Once we get the command, we either manually enter in the CMD (with RDP), or host a simple python web server (python3 -m http.server), put it in a text file and serve it to the victim, to make copy/paste easier ! </p>
+<p><b>Leaving a backdoor on the machine :</b></p>
+<p>If the service you initially exploited is down or patched, you can still gain access to the system. Metasploit has a Meterpreter script <b>persistence.rb</b> that will create a Meterpreter service that will be available to you even if the remote system is rebooted.</p>
+  <b>run persistence -X</b>
+<p> It will give options to work with it</p>
