@@ -28,8 +28,9 @@
 <img src="https://github.com/She9Bang/TryHackMe/blob/master/images/picklerick9.png">
 <p>Finding the second flag is quite easy, i'll leave that to you ! Hint : it's in /home/rick</p>
 <p>We have the root folder left to explore ! For that we need sudo powers, fortunately, after executing <b>sudo -l</b> we can see that we can use sudo on any command without any password ! so, now we have the sudo powers simply by adding sudo to our commands ! </p>
+<p>As an extra challenge, i'll let you explore the root folder alone too, the flag is basically at the front door ! just sudo your way into it</p>
 
-<p>After all we haven't used ssh, it was quite an easy CTF but fun ! </p>
+<p>After all we haven't used ssh, it was quite an easy but fun CTF ! </p>
 
 
 
